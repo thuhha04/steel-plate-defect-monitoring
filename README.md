@@ -1,124 +1,107 @@
 # Steel Plate Defect Monitoring Dashboard
 
-A Power BI portfolio project focused on analyzing steel plate inspection data and monitoring defect patterns from an operational perspective.
+A Power BI portfolio project using the **UCI Steel Plates Faults dataset** to explore defect patterns in steel plate inspection data.
 
-The project uses the UCI Steel Plates Faults dataset to explore fault frequency, steel type distribution, plate thickness, and pixel area. The dashboard transforms raw inspection data into a practical reporting view that can support defect monitoring, data validation, and further operational investigation.
+The project focuses on using data preparation, basic analysis, and visualization to create a simple dashboard for monitoring defect distribution and plate characteristics.
 
 ## Project Overview
 
-This project was created to demonstrate how raw manufacturing inspection data can be prepared, validated, analyzed, and transformed into an interactive operational dashboard.
+The dataset contains inspection information for steel plates, including:
 
-The analysis focuses on identifying patterns in steel plate defects and comparing defect characteristics across different fault categories and steel types.
-
-## Business Objective
-
-The main objectives of this project are to:
-
-* Monitor the frequency and distribution of different fault types.
-* Compare defect patterns between A300 and A400 steel types.
-* Analyze average plate thickness across fault categories.
-* Compare average pixel area across different fault categories.
-* Provide a simple reporting view that can support defect monitoring and further operational investigation.
-
-## Dataset
-
-**Source:** UCI Machine Learning Repository – Steel Plates Faults Dataset
-
-The dataset contains steel plate inspection measurements and fault classifications.
-
-Key fields used in this project include:
-
-* Steel Type — A300 / A400
+* Steel Type: A300 and A400
 * Fault Type
 * Plates Thickness
 * Pixel Area
 * Other inspection-related measurements
 
-The original dataset is not included in this repository. Please refer to the UCI Machine Learning Repository for the original dataset.
+I used Power BI to organize the data and build an interactive dashboard that makes the main patterns easier to review.
+
+## Business Objective
+
+The main goals of this project are to:
+
+* Understand which fault types occur most frequently.
+* Compare fault distribution between A300 and A400 steel types.
+* Compare average plate thickness across fault types.
+* Compare average pixel area across fault types.
+* Create a simple reporting view that can be used to monitor and explore inspection data.
+
+## Dataset
+
+**Source:** UCI Machine Learning Repository – Steel Plates Faults Dataset
+
+The dataset contains steel plate inspection records classified into different fault categories.
+
+The project uses the dataset for **descriptive analysis** rather than trying to determine the actual root cause of each defect.
 
 ## Data Preparation
 
-Data preparation was performed using **Power Query in Power BI**.
+I used **Power Query** to prepare the dataset before building the dashboard.
 
-Key steps included:
+Main steps included:
 
 * Reviewing the dataset structure and available fields.
-* Checking and preparing data types.
-* Identifying relevant fields for analysis.
-* Preparing the data for aggregation and visualization.
-* Validating key metrics against the source data.
+* Checking data types and relevant columns.
+* Preparing the data for analysis and visualization.
+* Checking key values and aggregations against the source data.
 
-## Dashboard & Metrics
+## Dashboard
 
-![Steel Plate Defect Monitoring Dashboard](screenshots/dashboard.png)
-The dashboard was designed as a one-page operational monitoring view.
+The dashboard provides a one-page view of the inspection data.
 
-### KPI Overview
+### KPIs
 
-* **Total Plates** — total number of plates in the dataset.
-* **A300** — number of A300 plates.
-* **A400** — number of A400 plates.
-* **Most Frequent Fault** — most frequently recorded fault category.
+* **Total Plates** – total number of valid records.
+* **A300** – number of A300 plates.
+* **A400** – number of A400 plates.
+* **Most Frequent Fault** – fault category with the highest number of records.
 
 ### Defect Analysis
 
-* **Fault Distribution** — overall frequency of each fault category.
-* **Fault Distribution by Steel Type** — comparison of fault frequency between A300 and A400.
+* **Fault Distribution** – number of plates by fault type.
+* **Fault Distribution by Steel Type** – comparison of fault types between A300 and A400.
 
 ### Plate Characteristics
 
 * **Average Plates Thickness by Fault Type**
 * **Average Pixel Area by Fault Type**
 
-### Interactive Filters
+### Filters
 
-The dashboard includes slicers for:
+The dashboard includes interactive filters for:
 
 * Fault Type
 * Steel Type
 
-These filters allow users to explore the data from different perspectives.
+![Steel Plate Defect Monitoring Dashboard](screenshots/dashboard.png)
 
-## Key Insights
+## Key Findings
 
-### 1. Other Fault is the most frequently observed defect
+Some patterns observed from the dashboard include:
 
-Other Fault has the highest number of recorded defects in the dataset, while Dirtiness has the lowest occurrence.
+1. **Other Fault** is the most frequently observed fault category, while **Dirtiness** has the lowest occurrence.
+2. **Other Fault** appears more frequently in A400 plates than in A300 plates.
+3. Average plate thickness differs across fault categories, with **Other Fault** having the highest average and **K Scratch** the lowest.
+4. Average pixel area also varies between fault categories, with **K Scratch** showing the highest average and **Stains** the lowest.
 
-This makes Other Fault a prominent category for further operational review.
-
-### 2. Other Fault occurs more frequently in A400 plates
-
-Other Fault appears more frequently in A400 plates than in A300 plates.
-
-This difference highlights a variation in defect distribution between the two steel types and provides a direction for further analysis.
-
-### 3. Plate thickness varies across fault categories
-
-Other Fault has the highest average plate thickness among the fault categories, while K Scratch has the lowest.
-
-This indicates that average plate thickness differs across defect categories and may be useful for further investigation.
-
-### 4. K Scratch has the highest average pixel area
-
-K Scratch has the highest average pixel area, while Stains has the lowest.
-
-Pixel area provides an additional descriptive dimension for comparing different defect categories.
+These findings describe patterns in the available dataset. They do not confirm the production root cause of the defects.
 
 ## Operational Recommendations
 
-* Prioritize further review of the **Other Fault** category because of its high occurrence.
-* Compare defect patterns between **A300 and A400** to identify differences that may require closer monitoring.
-* Monitor the relationship between **plate characteristics and observed fault categories** over time or across production batches when additional production data is available.
-* Use **pixel area** as an additional descriptive metric when monitoring changes in detected defect characteristics.
+Based on the analysis, a few areas could be investigated further:
 
-These findings should be treated as areas for further investigation rather than confirmed root causes, as the current dataset does not contain sufficient production-level information to determine underlying causes.
+* Review the characteristics of **Other Fault**, as it has the highest frequency.
+* Compare A300 and A400 defect patterns to identify areas that may require closer monitoring.
+* If production-level data is available, compare defect patterns across batches, production periods, or process conditions.
+* Use additional production information to investigate possible reasons behind differences between fault categories.
 
 ## Tools & Skills
 
 * Power BI
 * Power Query
-* Data Preparation & Validation
+* Microsoft Excel
+* Data Preparation
+* Data Validation
 * KPI Reporting
 * Data Analysis
 * Data Visualization
@@ -130,16 +113,9 @@ These findings should be treated as areas for further investigation rather than 
 
 ```text
 steel-plate-defect-monitoring/
-│
 ├── README.md
-│
 ├── powerbi/
 │   └── Steel_Plate_Defect_Monitoring_Dashboard.pbix
-│
 └── screenshots/
     └── dashboard.png
 ```
-
-## Project Purpose
-
-This project was created as a personal portfolio project to demonstrate practical skills in working with operational data, building reporting dashboards, validating metrics, and identifying patterns that can support production operations and further investigation.
