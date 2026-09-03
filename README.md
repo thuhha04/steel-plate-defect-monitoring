@@ -81,27 +81,27 @@ These filters allow users to explore the data from different perspectives.
 
 ## Key Insights
 
-### 1. Other_Fault is the most frequently observed defect
+### 1. Other Fault is the most frequently observed defect
 
-Other_Fault has the highest number of recorded defects in the dataset, while Dirtiness has the lowest occurrence.
+Other Fault has the highest number of recorded defects in the dataset, while Dirtiness has the lowest occurrence.
 
-This makes Other_Fault a prominent category for further operational review.
+This makes Other Fault a prominent category for further operational review.
 
-### 2. Other_Fault occurs more frequently in A400 plates
+### 2. Other Fault occurs more frequently in A400 plates
 
-Other_Fault appears more frequently in A400 plates than in A300 plates.
+Other Fault appears more frequently in A400 plates than in A300 plates.
 
 This difference highlights a variation in defect distribution between the two steel types and provides a direction for further analysis.
 
 ### 3. Plate thickness varies across fault categories
 
-Other_Fault has the highest average plate thickness among the fault categories, while K_Scratch has the lowest.
+Other Fault has the highest average plate thickness among the fault categories, while K Scratch has the lowest.
 
 This indicates that average plate thickness differs across defect categories and may be useful for further investigation.
 
-### 4. K_Scratch has the highest average pixel area
+### 4. K Scratch has the highest average pixel area
 
-K_Scratch has the highest average pixel area, while Stains has the lowest.
+K Scratch has the highest average pixel area, while Stains has the lowest.
 
 Pixel area provides an additional descriptive dimension for comparing different defect categories.
 
