@@ -107,7 +107,7 @@ Pixel area provides an additional descriptive dimension for comparing different 
 
 ## Operational Recommendations
 
-* Prioritize further review of the **Other_Fault** category because of its high occurrence.
+* Prioritize further review of the **Other Fault** category because of its high occurrence.
 * Compare defect patterns between **A300 and A400** to identify differences that may require closer monitoring.
 * Monitor the relationship between **plate characteristics and observed fault categories** over time or across production batches when additional production data is available.
 * Use **pixel area** as an additional descriptive metric when monitoring changes in detected defect characteristics.
