@@ -50,7 +50,7 @@ Key steps included:
 
 ## Dashboard & Metrics
 
-![Steel Plate Defect Monitoring Dashboard](screenshots/dashboard.png)
+![Steel Plate Defect Monitoring Dashboard](screenshots/dashboard.ipg)
 The dashboard was designed as a one-page operational monitoring view.
 
 ### KPI Overview
